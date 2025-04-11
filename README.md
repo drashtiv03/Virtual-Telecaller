@@ -67,14 +67,14 @@ pip install -r requirements.txt
    const TOKEN=[zego_call_token]
    ```
 
-2. Configure Google Drive access in `app.py`:
+2. Configure Google Drive access in `final.py`:
    ```bash python
    SERVICE_ACCOUNT_FILE = 'path/to/credentials.json'
    YOUR_EMAIL = 'your-email@example.com'
    FOLDER_ID = 'your-drive-folder-id'
    ```
 
-3. Set up model endpoints in `app.py`:
+3. Set up model endpoints in `final.py`:
    ```bash python
    endpoint = "your-model-endpoint"
    token = "your-api-key"

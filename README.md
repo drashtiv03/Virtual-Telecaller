@@ -28,6 +28,16 @@ A virtual AI telecaller system that combines voice calls with AI-powered respons
 9. Requirement of google drive bridge as training locally can be computationally expensive.
 10. Another functionality of chatbot which can give responses in written form after manually typing your queries.
 
+## Fine-Tuning Overview
+The Meta-Llama/Llama-3.2-3B-Instruct model was fine-tuned using:​
+1. Transfer Learning with LoRA for efficient adaptation.​
+2. Quantization to reduce model size and enhance speed.​
+3. Instruction Tuning to improve response accuracy.​
+4. Tokenization for effective text processing.​
+5. Accelerated Training utilizing GPU/TPU and Flash Attention.​
+6. Experiment Tracking with tools like WandB or TensorBoard.​
+7. Inference Optimization for real-time performance.​
+   
 ## Tech Stack
 - React.js
 - Zego Express Engine WebRTC

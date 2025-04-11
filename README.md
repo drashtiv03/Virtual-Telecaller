@@ -46,6 +46,7 @@ A virtual AI telecaller system that combines voice calls with AI-powered respons
 # Clone repository
 git clone [repository-url]
 cd telecaller
+```
 
 # Frontend setup
 cd frontend
@@ -58,21 +59,21 @@ pip install -r requirements.txt
 
 ### Configuration
 1. Update Zego credentials in `ZegoCall.js`:
-   ```javascript
+   ```bash javascript
    const APP_ID = [your-app-id]
    const APP_SIGN = [your-app-sign]
    const TOKEN=[zego_call_token]
    ```
 
 2. Configure Google Drive access in `app.py`:
-   ```python
+   ```bash python
    SERVICE_ACCOUNT_FILE = 'path/to/credentials.json'
    YOUR_EMAIL = 'your-email@example.com'
    FOLDER_ID = 'your-drive-folder-id'
    ```
 
 3. Set up model endpoints:
-   ```python
+   ```bash python
    endpoint = "your-model-endpoint"
    token = "your-api-key"
    ```
@@ -82,8 +83,9 @@ pip install -r requirements.txt
 # Start backend
 cd backend
 python final.py
-
+```
 # Start frontend (in a new terminal)
+```bash
 cd frontend
 npm run dev
 npm start

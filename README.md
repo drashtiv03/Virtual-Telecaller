@@ -74,7 +74,7 @@ pip install -r requirements.txt
    FOLDER_ID = 'your-drive-folder-id'
    ```
 
-3. Set up model endpoints:
+3. Set up model endpoints in `app.py`:
    ```bash python
    endpoint = "your-model-endpoint"
    token = "your-api-key"

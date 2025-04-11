@@ -37,7 +37,7 @@ A virtual AI telecaller system that combines voice calls with AI-powered respons
 
 ### Prerequisites
 - Node.js and npm
-- Python 3.x
+- Python 3.13.2
 - Google Drive API credentials
 - Zego API credentials
 
@@ -49,17 +49,19 @@ cd telecaller
 ```
 
 # Frontend setup
+```bash
 cd frontend
 npm install
-
+```
 # Backend setup
+```bash
 cd ../backend
 pip install -r requirements.txt
 ```
 
 ### Configuration
 1. Update Zego credentials in `ZegoCall.js`:
-   ```bash javascript
+   ```bash
    const APP_ID = [your-app-id]
    const APP_SIGN = [your-app-sign]
    const TOKEN=[zego_call_token]

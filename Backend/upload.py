@@ -4,11 +4,11 @@ from googleapiclient.http import MediaFileUpload
 
 # === CONFIGURATION ===
 
-SERVICE_ACCOUNT_FILE = 'D:\\Projects\\telecaller\\backend\\avid-influence-451503-v3-b0c64ccab032.json'
+SERVICE_ACCOUNT_FILE = 'Credentials.json'
 FILE_TO_UPLOAD = 'queries.txt'                      # File to upload
-YOUR_EMAIL = 'drashtivaghasiya2003@gmail.com'       # Your Google email
-MIMETYPE = 'text/plain'                             # Change if uploading other types (e.g., 'application/pdf')
-FOLDER_ID = '1mYtpp5m_RDrD7CLk8BbWLXAX0WIjcYRa'      # Folder ID to upload into
+YOUR_EMAIL = 'yourEmail'     
+MIMETYPE = 'text/plain'                           
+FOLDER_ID = 'FolderID'      # Folder ID from Google Drive URL
 
 # === AUTHENTICATION ===
 

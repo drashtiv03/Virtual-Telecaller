@@ -3,9 +3,10 @@
 import { useState, useRef, useEffect } from "react"
 import { ZegoExpressEngine } from "zego-express-engine-webrtc"
 
-const APP_ID = "appID"
-const APP_SIGN = "appSign"
 const ROOM_ID = "TestRoom"
+#Following details can be taken from zego cloud console
+const APP_ID = "appID"  
+const APP_SIGN = "appSign"
 const USER_ID = "userID"
 
 
@@ -102,7 +103,7 @@ function ZegoCall() {
   const startCall = async () => {
     try {
       setStatus("Initializing call...")
-      const TOKEN="ZegoCallToken"
+      const TOKEN="ZegoCallToken"  #Insert your token from Zego Cloud
 
       // Initialize Zego engine
       zegoClient.current = new ZegoExpressEngine(APP_ID, APP_SIGN)

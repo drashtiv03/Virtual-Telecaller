@@ -5,7 +5,7 @@ import io
 
 # === CONFIGURATION ===
 
-SERVICE_ACCOUNT_FILE = 'Credential_JSON'
+SERVICE_ACCOUNT_FILE = 'Credential_JSON.json'
 FILE_NAME = 'response.txt'  
 FOLDER_ID = '1mYtpp5m_RDrD7CLk8BbWLXAX0WIjcYRa' #ID retrieved from URL of google drive where response.txt is recorded
 LOCAL_DOWNLOAD_PATH = 'downloaded_response.txt'

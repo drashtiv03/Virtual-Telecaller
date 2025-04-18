@@ -23,10 +23,10 @@ client = OpenAI(
 )
 
 # === Google Drive Configuration ===
-SERVICE_ACCOUNT_FILE = 'D:\\Projects\\telecaller\\backend\\niti.json'
-FILE_TO_UPLOAD = 'queries.txt'
+SERVICE_ACCOUNT_FILE = 'Your_Credential_File'
+FILE_TO_UPLOAD = 'queries.txt' #file name which will show in your drive
 YOUR_EMAIL = 'your email'
-FOLDER_ID = '1dm3dBuiLh4bjZrdEOCXoGCR5WAwQsE98'
+FOLDER_ID = 'YourID' #Folder ID retrieved from the google drive URL where your file is uploaded
 MIMETYPE = 'text/plain'
 
 # Initialize Drive Service
@@ -179,88 +179,10 @@ def fetch_and_read_response():
     except Exception as e:
         print(f"Error fetching response: {str(e)}")
         return None
-# @app.route('/speech-chat', methods=['POST'])
-# def speech_chat():
-#     """Endpoint that receives recognized speech, saves to file, and uploads to Google Drive"""
-#     try:
-#         data = request.json
-#         message = data.get('message', '').strip()
-        
-#         if not message:
-#             return jsonify({'error': 'No message provided'}), 400
 
-#         # Write to queries.txt (append mode)
-#         with open(FILE_TO_UPLOAD, 'w', encoding='utf-8') as f:
-#             f.write(f"{message}\n")
-
-#         # Upload/update to Google Drive
-#         drive_response = handle_drive_upload()
-        
-#         return jsonify({
-#             'status': 'success',
-#             'message': 'Text saved and uploaded to Google Drive',
-#             'content': message,
-#             'drive_file_id': drive_response['file_id'],
-#             'drive_link': drive_response['file_link']
-#         }), 200
-
-#     except Exception as e:
-#         return jsonify({'error': str(e)}), 500
-
-if __name__ == '__main__':
     # Create empty file if it doesn't exist
     if not os.path.exists(FILE_TO_UPLOAD):
         with open(FILE_TO_UPLOAD, 'w') as f:
             pass
             
     app.run(debug=True)
-
-
-# import os
-# from flask import Flask, request, jsonify
-# from flask_cors import CORS
-# from openai import OpenAI
-
-# app = Flask(__name__)
-# CORS(app)  # Enable CORS for frontend integration
-
-# # OpenAI API Configuration
-# token = "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"  # Note: This appears to be a GitHub token, not OpenAI
-# endpoint = "https://models.inference.ai.azure.com"
-# model_name = "gpt-4o"
-
-# client = OpenAI(
-#     base_url=endpoint,
-#     api_key=token,
-# )
-
-# @app.route("/ai-chat", methods=["POST"])
-# def ai_chat():
-#     """Endpoint for OpenAI chat completions"""
-#     try:
-#         data = request.json
-#         user_message = data.get("message")
-
-#         if not user_message:
-#             return jsonify({"error": "Message is required"}), 400
-
-#         response = client.chat.completions.create(
-#             messages=[
-#                 {"role": "system", "content": "You are a helpful assistant."},
-#                 {"role": "user", "content": user_message},
-#             ],
-#             temperature=1.0,
-#             top_p=1.0,
-#             max_tokens=1000,
-#             model=model_name,
-#         )
-
-#         return jsonify({"response": response.choices[0].message.content})
-
-#     except Exception as e:
-#         return jsonify({"error": str(e)}), 500
-
-
-
-# if __name__ == '__main__':
-#     app.run(debug=True)

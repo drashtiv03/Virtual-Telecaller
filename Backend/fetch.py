@@ -5,9 +5,9 @@ import io
 
 # === CONFIGURATION ===
 
-SERVICE_ACCOUNT_FILE = 'D:\\Projects\\telecaller\\backend\\avid-influence-451503-v3-b0c64ccab032.json'
-FILE_NAME = 'response.txt'
-FOLDER_ID = '1mYtpp5m_RDrD7CLk8BbWLXAX0WIjcYRa'
+SERVICE_ACCOUNT_FILE = 'Credential_JSON'
+FILE_NAME = 'response.txt'  
+FOLDER_ID = '1mYtpp5m_RDrD7CLk8BbWLXAX0WIjcYRa' #ID retrieved from URL of google drive where response.txt is recorded
 LOCAL_DOWNLOAD_PATH = 'downloaded_response.txt'
 
 # === AUTHENTICATION ===
